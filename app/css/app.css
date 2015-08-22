@@ -1,10 +1,11 @@
 
 body {
   padding-top: 20px;
+  background-color: #87CEFA
 }
 
-.area {
-  background-color: blue;
+.options {
+  background-color: #E0FFFF;
   width: 450px;
   height: 450px;
 }

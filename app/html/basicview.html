@@ -1,4 +1,16 @@
 <!doctype html>
-<div class = "area">
-  <p> Hi {{name}} ! </p>
+
+<div id = "sortOptions" class="options">
+  Choose sorting algorithm
+  <form>
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="quick" /> Quick <br/>
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="merge"/> Merge <br/>
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="bubble" /> Bubble <br />
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="radix" /> Radix <br />
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="insertion" /> Insertion <br />
+    <input type="radio" name="sortChoices" ng-model="sort.name" value="heap" /> Heap <br />
+    <p> You chose {{sort.name}} ! </p>
+    <br/>
+
+  </form>
 </div>
