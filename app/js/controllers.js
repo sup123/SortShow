@@ -7,3 +7,9 @@ SortShowControllers.controller('BasicViewCtrl', ['$scope',
     $scope.name = 'Suparna';
   }
 ]);
+
+SortShowControllers.controller('DamiensViewCtrl',  ['$scope',
+  function($scope) {
+    $scope.name = 'Damien';
+  }
+]);

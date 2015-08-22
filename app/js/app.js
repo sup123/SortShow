@@ -8,12 +8,12 @@ var ShowSortApp = angular.module('ShowSortApp', [
 ShowSortApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/basicview', {
+      when('/', {
         templateUrl: 'html/basicview.html',
-        controller: 'BasicViewCtrl'
+        controller: 'DamiensViewCtrl'
       }).
       otherwise({
-        redirectTo: '/basicview'
+        redirectTo: '/'
       });
   }
 ]);
