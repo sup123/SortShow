@@ -13,3 +13,16 @@ SortShowControllers.controller('DamiensViewCtrl',  ['$scope',
     $scope.name = 'Damien';
   }
 ]);
+
+SortShowControllers.controller('SimpleListCtrl', ['$scope',
+  function($scope) {
+      $scope.algorithms = [
+        "Quick",
+        "Merge",
+        "Bubble",
+        "Heap",
+        "Selection",
+        "Radix"
+      ];
+  }
+]);
