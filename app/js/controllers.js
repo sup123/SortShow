@@ -25,6 +25,7 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
             if (!isNaN(num)) {
               var numbers =  $scope.numbers;
               if (numbers.indexOf(num) == -1) {
+
                 numbers.push(num);
               }
               $scope.listInput = "";

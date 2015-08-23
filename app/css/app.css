@@ -12,22 +12,34 @@ body {
   display:inline;
 }
 
-.simple-list{
-  background-color : #E0FFFF;
-  float : left;
-  position:relative;
-}
-
 .list-input{
   float: left;
-  position:relative;
+  position:fixed;
+}
+
+.list {
+  display : inline;
+}
+
+
+.simple-list{
+   height: 50px;
+   width: 50px;
+   float = left;
+   border: 3px solid gray;
+   background: lightgray;
+   position: fixed;
+   opacity: 2.0;
+}
+
+.animate-enter {
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
 }
 
 .input-button{
   background-color: #E0FFFF;
   border-radius: 4px 4px 0 0;
-}
 
-.list {
-  display : inline;
 }
