@@ -16,22 +16,25 @@ SortShowControllers.controller('DamiensViewCtrl',  ['$scope',
 
 SortShowControllers.controller('SimpleListCtrl', ['$scope',
   function($scope) {
-      $scope.algorithms = [
-        "Quick",
-        "Merge",
-        "Bubble",
-        "Heap",
-        "Selection",
-        "Radix"
-      ];
+      $scope.numbers = [];
 
       $scope.add = function(event) {
         if(event.keyCode === 13){
           if ($scope.listInput.trim() != "") {
-            $scope.algorithms.push($scope.listInput.trim());
-            $scope.listInput = "";
+            var num = $scope.listInput.trim();
+            if (!isNaN(num)) {
+              var numbers =  $scope.numbers;
+              if (numbers.indexOf(num) == -1) {
+                numbers.push(num);
+              }
+              $scope.listInput = "";
+            }
           }
         }
+      };
+
+      $scope.sort = function() {
+        var timer = setInterval(function () {sortStep($scope.numbers)}, 1000);
       };
   }
 ]);

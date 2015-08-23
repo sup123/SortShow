@@ -5,7 +5,7 @@
   <div class="col-md-2">
     <div class = "simple-list">
       <ul class = "algorithms">
-        <li class = "list" ng-repeat="alg in algorithms">
+        <li class = "list" ng-repeat="alg in numbers">
           {{ alg }}
         </li>
       </ul>
@@ -14,7 +14,10 @@
 
   <div class="col-md-5">
     <div class = "list-input">
-      <input class = "list-box" id="list-box" type = "text" ng-model="listInput" ng-keypress="add($event)">
+      <input class = "list-box" type = "text" ng-model="listInput" ng-keypress="add($event)"></input>
+    </div>
+    <div class = "sort-button">
+      <button class = "input-button" type = "button" ng-click="sort()">Sort</button>
     </div>
   </div>
 </div>
