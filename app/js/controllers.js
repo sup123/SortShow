@@ -49,7 +49,7 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
       };
 
       $scope.sort = function() {
-        var timer = setInterval(function () {sortStep($scope.numbers)}, 1000);
+        selectionSort($scope.numbers);
       };
   }
 ]);
