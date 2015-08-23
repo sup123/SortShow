@@ -27,9 +27,9 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
               if (numbers.indexOf(num) == -1) {
                 numbers.push(num);
               }
-              $scope.listInput = "";
             }
           }
+          $scope.listInput = "";
         }
       };
 
