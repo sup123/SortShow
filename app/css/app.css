@@ -1,25 +1,30 @@
-
 body {
-  padding-top: 20px;
+  margin: 0;
+  padding:0;
   background-color: #87CEFA
 }
 
-.options {
-  background-color: #E0FFFF;
+.container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
-.row{
+.row {
   display:inline;
 }
 
-.list-input{
-  position:relative;
-  display:inline;
+.nav {
+    margin-top: 30px;
 }
 
-.sort-button{
-  position:relative;
-  display:inline;
+.list-input {
+  position: relative;
+  display: inline;
+}
+
+.sort-button {
+  position: relative;
+  display: inline;
 }
 
 .list {
@@ -28,16 +33,12 @@ body {
 
 #header{
     width:100%;
-    margin: 0;
+    height: 100px;
+    margin: 0 auto;
     padding: 0;
-    position: fixed;
+    position: absolute;
     top: 0px;
     background-color: #9999FF;
-}
-
-#headerContent {
-    margin: 0px auto;
-    width: 100%;
 }
 
 .simple-list{
@@ -48,6 +49,7 @@ body {
    background: lightgray;
    position: relative;
    display : inline-block;
+   margin-top: 100px;
    opacity: 2.0;
 }
 
