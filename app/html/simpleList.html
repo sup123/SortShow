@@ -1,19 +1,49 @@
 <!doctype html>
 <div class="container-fluid">
 
- <div class = "row">
-    <div class = "list-input">
-       <input class = "list-box" type = "text" ng-model="listInput" ng-keypress="add($event)">
+     <div class = "row">
+        <!-- Top banner -->
+         <div id = "header">
+             <div id ="headerContent">
+                 <!-- Create the drop down menu for sorting options-->
+                 <div class = "col-md-4">
+                     <div class="dropdown">
+                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Algorithm
+                             <span class="caret"></span></button>
+                         <ul class="dropdown-menu">
+                             <li>Bubble Sort</li>
+                             <li>Merge Sort</li>
+                             <li>Quick Sort</li>
+                             <li>Heap Sort</li>
+                         </ul>
+                     </div>
+                 </div>
+
+                 <!-- Text box for number entries -->
+                 <div class="col-md-4">
+                     <div class = "list-input">
+                         <input class = "list-box" type = "text" ng-model="listInput" ng-keypress="add($event)">
+                     </div>
+                 </div>
+
+                 <!-- sort button -->
+                 <div class = "col-md-4">
+                     <div class = "sort-button">
+                         <button class = "input-button" type = "button" ng-click="sort()">Sort</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-md-2">
+             <div class = "simple-list" ng-repeat="alg in numbers" ng-animate=" 'animate' " >
+                {{ alg }}
+              </div>
+         </div>
+
+
+
     </div>
-     <div class = "sort-button">
-       <button class = "input-button" type = "button" ng-click="sort()">Sort</button>
-     </div>
-   </div>
-
-<div class = "row">
-  <div class = "simple-list" ng-repeat="alg in numbers" ng-animate=" 'animate' " >
-          {{ alg }}
-  </div>
-</div>
 
 </div>
+
