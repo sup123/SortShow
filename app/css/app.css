@@ -28,18 +28,20 @@ body {
    float = left;
    border: 3px solid gray;
    background: lightgray;
-   position: fixed;
+   position: relative;
    opacity: 2.0;
 }
 
 .animate-enter {
-	-webkit-transition: 1s linear all; /* Chrome */
+	-webkit-transition: 1s linear all;
 	transition: 1s linear all;
 	opacity: 0;
 }
 
+.animate-enter.animate-enter-active {
+	opacity: 2.0;
+}
 .input-button{
   background-color: #E0FFFF;
   border-radius: 4px 4px 0 0;
-
 }
