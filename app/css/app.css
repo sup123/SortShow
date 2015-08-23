@@ -21,6 +21,19 @@ body {
   display : inline;
 }
 
+#header{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0px;
+    background-color: #9999FF;
+}
+
+#headerContent {
+    margin: 0px auto;
+    width: 100%;
+}
 
 .simple-list{
    height: 50px;
