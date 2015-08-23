@@ -6,14 +6,21 @@ body {
 
 .options {
   background-color: #E0FFFF;
-  width: 450px;
-  height: 450px;
+}
+
+.row{
+  display:inline;
 }
 
 .simple-list{
   background-color : #E0FFFF;
-  width: 450px;
-  height: 450px;
+  float : left;
+  position:relative;
+}
+
+.list-input{
+  float: left;
+  position:relative;
 }
 
 .list {

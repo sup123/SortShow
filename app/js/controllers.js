@@ -24,5 +24,14 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
         "Selection",
         "Radix"
       ];
+
+      $scope.add = function(event) {
+        if(event.keyCode === 13){
+          if ($scope.listInput.trim() != "") {
+            $scope.algorithms.push($scope.listInput.trim());
+            $scope.listInput = "";
+          }
+        }
+      };
   }
 ]);
