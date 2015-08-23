@@ -2,25 +2,18 @@
 <div class="container-fluid">
 
  <div class = "row">
-  <div class="col-md-2">
-    <div class = "simple-list" ng-repeat="alg in numbers" ng-animate=" 'animate' " >
-
-            {{ alg }}
-
+    <div class = "list-input">
+       <input class = "list-box" type = "text" ng-model="listInput" ng-keypress="add($event)">
     </div>
-  </div>
-
-
-  <div class="col-md-5">
-
-   <div class = "list-input">
-      <input class = "list-box" type = "text" ng-model="listInput" ng-keypress="add($event)">
+     <div class = "sort-button">
+       <button class = "input-button" type = "button" ng-click="sort()">Sort</button>
+     </div>
    </div>
-    <div class = "sort-button">
-      <button class = "input-button" type = "button" ng-click="sort()">Sort</button>
-    </div>
+
+<div class = "row">
+  <div class = "simple-list" ng-repeat="alg in numbers" ng-animate=" 'animate' " >
+          {{ alg }}
   </div>
 </div>
 
 </div>
-

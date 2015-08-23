@@ -13,12 +13,17 @@ body {
 }
 
 .list-input{
-  float: left;
-  position:fixed;
+  position:relative;
+  display:inline;
+}
+
+.sort-button{
+  position:relative;
+  display:inline;
 }
 
 .list {
-  display : inline;
+  display : inline-block;
 }
 
 
@@ -29,6 +34,7 @@ body {
    border: 3px solid gray;
    background: lightgray;
    position: relative;
+   display : inline-block;
    opacity: 2.0;
 }
 
