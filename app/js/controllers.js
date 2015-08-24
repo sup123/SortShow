@@ -21,9 +21,10 @@ SortShowControllers.controller('DamiensViewCtrl',  ['$scope',
 
 /* This controller is slightly more complicated. It has two functions
  * pushed onto the scope so that they can be called in the html */
-SortShowControllers.controller('SimpleListCtrl', ['$scope',
-  function($scope) {
+SortShowControllers.controller('SimpleListCtrl', ['$scope', '$interval',
+  function($scope, $interval) {
       $scope.numbers = [];
+      var running;
 
       $scope.add = function(event) {
         /* Event is a key event */
@@ -38,7 +39,7 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
               var numbers =  $scope.numbers;
               if (numbers.indexOf(num) == -1) {
 
-                numbers.push(num);
+                numbers.push(parseInt(num));
               }
             }
           }
@@ -49,7 +50,32 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope',
       };
 
       $scope.sort = function() {
-        selectionSort($scope.numbers);
+        if ( angular.isDefined(running) ) return;
+
+        $scope.i = $scope.numbers.length - 1;
+        $scope.j = 1;
+        $scope.k = 0;
+
+        running = $interval(function() {
+          var update = selectionSortWalkthrough($scope.numbers, $scope.i, $scope.j, $scope.k);
+
+          $scope.numbers = update["list"];
+          $scope.i = update["i"];
+          $scope.j = update["j"];
+          $scope.k = update["k"];
+
+          if (isSorted($scope.numbers)) {
+            $scope.endSort();
+          }
+        }, 2000);
       };
+
+      $scope.endSort = function() {
+        if (angular.isDefined(running)) {
+            $interval.cancel(running);
+            running = undefined;
+          }
+      };
+
   }
 ]);
