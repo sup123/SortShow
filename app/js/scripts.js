@@ -1,16 +1,3 @@
-var i,j,k, isSorted, timedWalkthrough, globallist;
-
-var stepThrough = function(list) {
-  /* Set up the timer to do walkthrough */
-  i = list.length - 1;
-  j = 1;
-  k = 0;
-  globallist = list;
-
-  timedWalkthrough = setInterval(function () { selectionSortWalkthrough(list) }, 2000);
-
-}
-
 /* Kruskal's version of selection sort */
 var selectionSort = function(list) {
 
@@ -42,17 +29,23 @@ var isSorted = function(arr) {
   return sorted;
 }
 
+/* This simply assigns the values of list
+ * the values of otherlist
+ */
 var update = function(list, otherlist) {
   for (var i = 0; i < list.length; i++) {
     list[i] = otherlist[i];
   }
 }
 
-
+/**
+ * Since for some reason, when $interval is used,
+ * the function's variables dont change outside of
+ * the function's scope so returning their values
+ * so they can be updated outside the function is
+ * necessary
+ */
 var selectionSortWalkthrough = function(list, i, j, k) {
-  console.log("i: " + i);
-  console.log("j: " + j);
-  console.log("k: " + k);
   /* This is one step within the sort function */
   /* If i is greater than 0 then the sort isn't finished */
   if (i > 0) {
@@ -62,7 +55,6 @@ var selectionSortWalkthrough = function(list, i, j, k) {
         k = j;
       }
 
-      /* Increment j */
       j++;
     } else {
       /* This is the end of the for loop so update k and j appropriately */
