@@ -78,3 +78,20 @@ var selectionSortWalkthrough = function(list, i, j, k) {
   return { "list" : list, "i" : i, "j" : j, "k" : k };
 
 }
+
+/* Kruskal's version of insertion sort */
+var insertionSort(list) {
+  for (var i = 1; i < list.length; i++) {
+    var temp = list[i];
+    var j = i - 1;
+      while ((temp < list[j]) && (j > 0)) {
+        list[j + 1] = list[j];
+        j = j + 1;
+        /* Delay execution */
+        setTimeout(function() {}, 2000);
+      }
+      list[j + 1] = temp;
+      /* Delay execution */
+      setTimeout(function() {}, 2000);
+  }
+}
