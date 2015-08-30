@@ -8,16 +8,13 @@
                  <div class = "col-md-4">
                      <div class = "nav">
                          <div class="dropdown">
-                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Algorithm
+                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
+                                 {{selectedItem}}
                                  <span class="caret"></span>
                              </button>
-                             <ul class="dropdown-menu">
-                                 <li>Bubble Sort</li>
-                                 <li>Merge Sort</li>
-                                 <li>Quick Sort</li>
-                                 <li>Heap Sort</li>
-                                 <l1>Insertion Sort</l1>
-
+                             <!-- Sorting algorithm options -->
+                             <ul id = "chosenSort" class="dropdown-menu dropdown-inverse" aria-labelledby="dropdownMenu1">
+                                 <li ng-repeat="a in options"><a ng-click="dropboxitemselected(a)">{{a}}</a></li> <!-- Update dropdown choice> -->
                              </ul>
                          </div>
                      </div>
@@ -61,4 +58,3 @@
     </div>
 
 </div>
-

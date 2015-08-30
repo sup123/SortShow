@@ -14,12 +14,13 @@ SortShowApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'html/basicview.html',
-        controller: 'DamiensViewCtrl'
-      }).
-      when('/ListExample',{
         templateUrl: 'html/simpleList.html',
         controller: 'SimpleListCtrl'
+
+      }).
+      when('/BasicView',{
+        templateUrl: 'html/ListEx.html',
+        controller: 'DamiensViewCtrl'
       }).
       otherwise({
         redirectTo: '/'

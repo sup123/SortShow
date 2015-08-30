@@ -23,8 +23,22 @@ SortShowControllers.controller('DamiensViewCtrl',  ['$scope',
  * pushed onto the scope so that they can be called in the html */
 SortShowControllers.controller('SimpleListCtrl', ['$scope', '$interval',
   function($scope, $interval) {
-      $scope.numbers = [];
-      var running;
+
+       $scope.selectedItem = 'Choose Algorithm';
+
+       /* These will be binded to the bootstrap dropdown */
+       $scope.options = ['Bubble Sort', 'Merge Sort', 'Selection Sort', 'Insertion Sort', 'Quick Sort'];
+       $scope.selectedItem;
+
+      /* update drop down choice */
+       $scope.dropboxitemselected = function (item) {
+
+               $scope.selectedItem = item;
+        }
+
+
+       $scope.numbers = [];
+       var running;
 
       $scope.add = function(event) {
         /* Event is a key event */
@@ -76,6 +90,7 @@ SortShowControllers.controller('SimpleListCtrl', ['$scope', '$interval',
             running = undefined;
           }
       };
+
 
   }
 ]);

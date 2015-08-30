@@ -1,3 +1,22 @@
+/* Bubble sort */
+var bubbleSort = function(list) {
+  var swapped = true;
+  var j = 0;
+  var tmp;
+  while (swapped) {
+     swapped = false;
+     j++;
+     for (var i = 0; i < list.length - j; i++) {
+        if (arr[i] > arr[i + 1]) {
+            tmp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = tmp;
+            swapped = true;
+        }
+     }
+  }
+}
+
 /* Kruskal's version of selection sort */
 var selectionSort = function(list) {
 
@@ -29,9 +48,7 @@ var isSorted = function(arr) {
   return sorted;
 }
 
-/* This simply assigns the values of list
- * the values of otherlist
- */
+/* This simply assigns the values of list  the values of otherlist */
 var update = function(list, otherlist) {
   for (var i = 0; i < list.length; i++) {
     list[i] = otherlist[i];
